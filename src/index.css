@@ -1,8 +1,10 @@
 .bg-gradient {
-    background: linear-gradient(87deg, #DB00FF 5.19%, #8B62FF 91.04%);}
+    background: linear-gradient(87deg, #24FF00 5.19%, #7BFFB0 91.04%);
+}
 
 .txt-gradient {
-    background: linear-gradient(87deg, #DB00FF 5.19%, #8B62FF 91.04%);
+    background: linear-gradient(87deg, #24FF00 5.19%, #7BFFB0 91.04%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -32,6 +34,7 @@
 
 /* Games Grid */
 
-.sc-title {
+.sc-title{
     font-size: 16px;
 }
+

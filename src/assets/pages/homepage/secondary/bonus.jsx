@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { Scrollbar } from '../../../components/scrollbar/scrollbar'
 import './bonus.css'
-export function Bonus({ img, affLink }) {
+
+import { ProgressBar } from '../../../components/progressBar/progress.jsx'
+export function Bonus({ img, affLink, setFullFill }) {
 
 
+    const [revealBtn, setRevealBtn] = useState(false)
     const [iFrameOn, setiFrameOn] = useState(false)
     const headerStyle = {
         backgroundImage: `url(${img})`,
@@ -12,6 +15,16 @@ export function Bonus({ img, affLink }) {
         // Add more styles as needed
     };
 
+
+    function handleGetBonusClick() {
+
+
+        setRevealBtn(true)
+
+        setTimeout(() => setiFrameOn(true), 1800
+        )
+
+    }
 
     return (
         <section id="bonusPage">
@@ -23,13 +36,17 @@ export function Bonus({ img, affLink }) {
             <div className="imgheaderBlock"></div>
 
             <div className="bonusContent borderSpacing">
-                <img src='https://i.postimg.cc/xT50Kc8B/vemapostare.png' width={260}/>
+                <img src="https://betando.com/img/logos/MobileLogo.svg?v=2023-09-01T10:18:46.037" className="bonusHouse" alt="" />
                 <div className="bh-txt">
-                    <h3 className='housetitle txt-gradient'>Vem Apostar</h3>
+                    <h3 className='housetitle txt-gradient'>Betando</h3>
                     <h2>Única plataforma onde os
                         analistas trabalham e o BUG Funciona!</h2>
                 </div>
-                <button className='bg-gradient bullsCta' onClick={() => setiFrameOn(true)} >RESGATAR BÔNUS</button>
+                <button className='bg-gradient bullsCta' onClick={() => handleGetBonusClick()} style={{ display: revealBtn == true ? 'none' : 'flex' }}>RESGATAR BÔNUS</button>
+
+                <div className="pg" style={{ display: revealBtn == false ? 'none' : 'flex' }}>
+                    <ProgressBar revealBtn={revealBtn} />
+                </div>
             </div>
             <div className="warningstroke">
                 <div className="warning">
@@ -51,7 +68,11 @@ export function Bonus({ img, affLink }) {
                         dentro do nosso sistema.</p>
                 </div>
             </div>
+
             <iframe src={affLink} id='bonusiFrame' className={iFrameOn ? "" : "if-disabled"}></iframe>
+
+
+
 
         </section >
     )
