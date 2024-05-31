@@ -36,9 +36,9 @@ export function Bonus({ img, affLink, setFullFill }) {
             <div className="imgheaderBlock"></div>
 
             <div className="bonusContent borderSpacing">
-                <img src="https://betando.com/img/logos/MobileLogo.svg?v=2023-09-01T10:18:46.037" className="bonusHouse" alt="" />
+                <img src="https://storage.fds.bet/betdavez.com/settings/4zxwFtMhSeqbGcyD.406EeVTfpJgpXJql9LzxE4WFaZizQNCbe06.png" className="bonusHouse" alt="" />
                 <div className="bh-txt">
-                    <h3 className='housetitle txt-gradient'>Betando</h3>
+                    <h3 className='housetitle txt-gradient'>BetDaVez</h3>
                     <h2>Única plataforma onde os
                         analistas trabalham e o BUG Funciona!</h2>
                 </div>
