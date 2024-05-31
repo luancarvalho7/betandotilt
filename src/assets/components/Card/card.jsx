@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './card.css'
 
 export function Card({ data, setSGame, vipAccess=false, checkout }) {
@@ -16,6 +17,9 @@ export function Card({ data, setSGame, vipAccess=false, checkout }) {
 
     // Format the profit
 
+    useEffect(()=>{
+        console.log(data)
+    },[])
 
 
     const formattedProfit = profit < 1000 ? profit.toString() : (profit / 1000).toLocaleString('en-US', { minimumFractionDigits: 3, maximumFractionDigits: 3 });

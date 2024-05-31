@@ -285,7 +285,7 @@ function App() {
               analyst={selectedGame.analyst}
               profit={selectedGame.profit}
               onlinePlayers={selectedGame.onlinePlayers}
-              affLink={affLink}
+              affLink={selectedGame.ifrCassinoPix}
               inicio={inicio}
               home={home}
               vipAccess={vipAccess}
